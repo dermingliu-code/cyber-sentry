@@ -1,0 +1,38 @@
+# 🛡️ CYBER-SENTRY PRO: Edge AI Tactical Vision System
+
+[![Python Version](https://img.shields.io/badge/python-3.11+-blue.svg)](https://www.python.org/)
+[![Platform](https://img.shields.io/badge/platform-Raspberry%20Pi%205-red.svg)](https://www.raspberrypi.com/)
+[![NPU](https://img.shields.io/badge/NPU-IMX500-orange.svg)](https://www.sony-semicon.co.jp/)
+
+**CYBER-SENTRY PRO** 是一款專為 Raspberry Pi 5 打造的高性能邊緣 AI 戰術視覺系統。結合了 Sony IMX500 NPU 進行物體識別，並採用異步三核心架構實現了零延遲的 TFT 畫面渲染與動態威脅監測儀表板。
+
+---
+
+## ✨ 核心特色
+
+- **🚀 異步三核心 (Tri-Core) 架構**：AI 推論、OpenCV 渲染、終端機 UI 獨立運作，互不阻塞，確保流暢度。
+- **🎯 精準偵測**：專為生物（人、貓、狗等）優化的白名單過濾機制。
+- **📟 戰術儀表板**：Cyberpunk 風格終端機介面，具備動態威脅指數衰減條與偵測日誌。
+- **📺 專業儀式感動畫**：模擬高階設備開機自檢與關機能量坍縮特效，解決 SPI 螢幕白屏殘影。
+- **🛠️ 即時參數調教**：使用旋轉編碼器 (Rotary Encoder) 即時調整 AI 信心度門檻 (TH)。
+
+---
+
+## 🛠️ 硬體需求
+
+| 組件 | 型號 |
+| :--- | :--- |
+| **主機** | Raspberry Pi 5 |
+| **AI 鏡頭** | Sony IMX500 (Raspberry Pi AI Camera) |
+| **顯示器** | ST7789 240x320 TFT LCD |
+| **控制組件** | 旋轉編碼器 (Rotary Encoder), 主動式蜂鳴器, LED 燈, 按鈕 |
+
+---
+
+## 📦 安裝指南
+
+### 1. 系統相依性
+請確保您的系統已安裝 `picamera2` 驅動與中文字型：
+```bash
+sudo apt update
+sudo apt install -y python3-picamera2 fonts-noto-cjk
